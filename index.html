@@ -21,7 +21,7 @@
 
 <header class="header">
 
-    <a href="#" class="logo"> <img src="./image/logo.png" alt="" width="80px" height="80px"> cosmetics </a>
+    <a href="#" class="logo"> <img src="./image/logo.png" alt="" width="120px" height="90px"></a>
 
     <nav class="navbar">
         <a href="#home">home</a>
@@ -69,7 +69,7 @@
             <img src="image/sanpham (7).jpg" alt="">
             <div class="content">
                 <h3>Product Name</h3>
-                <span class="price">$20.00-</span>
+                <span class="price">$20.00/-</span>
                 <span class="quantity">quantity : 1</span>
             </div>
         </div>
@@ -77,14 +77,61 @@
         <a href="#" class="btn">checkout</a>
     </div>
 
-    <form action="" class="login-form">
+    <!-- <form action="" class="login-form">
         <h3>login now</h3>
         <input type="email" placeholder="your email" class="box">
         <input type="password" placeholder="your password" class="box">
         <p>forget your password <a href="#">click here</a></p>
         <p>don't have an account <a href="#">create now</a></p>
         <input type="submit" value="login now" class="btn">
-    </form>
+    </form> -->
+    <div class="wrapper">
+        <div class="title-text">
+          <div class="title login">Login Form</div>
+          <div class="title signup">Signup Form</div>
+        </div>
+        <div class="form-container">
+          <div class="slide-controls">
+            <input type="radio" name="slide" id="login" checked>
+            <input type="radio" name="slide" id="signup">
+            <label for="login" class="slide login">Login</label>
+            <label for="signup" class="slide signup">Signup</label>
+            <div class="slider-tab"></div>
+          </div>
+          <div class="form-inner">
+            <form action="#" class="login">
+              <div class="field">
+                <input type="text" placeholder="Email Address" required>
+              </div>
+              <div class="field">
+                <input type="password" placeholder="Password" required>
+              </div>
+              <div class="pass-link"><a href="#">Forgot password?</a></div>
+              <div class="field btn">
+                <div class="btn-layer"></div>
+                <input type="submit" value="Login">
+              </div>
+              <div class="signup-link">Not a member? <a href="">Signup now</a></div>
+            </form>
+            <form action="#" class="signup">
+              <div class="field">
+                <input type="text" placeholder="Email Address" required>
+              </div>
+              <div class="field">
+                <input type="password" placeholder="Password" required>
+              </div>
+              <div class="field">
+                <input type="password" placeholder="Confirm password" required>
+              </div>
+              <div class="field btn">
+                <div class="btn-layer"></div>
+                <input type="submit" value="Signup">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+  
 
 </header>
 
@@ -1025,6 +1072,28 @@
 
 <!-- custom js file link -->
 <script src="js/script.js"></script>
+
+<script type="text/javascript">
+    const loginText = document.querySelector(".title-text .login");
+      const login = document.querySelector("form.login");
+      const loginBtn = document.querySelector("label.login");
+      const signupBtn = document.querySelector("label.signup");
+      const signupLink = document.querySelector("form .signup-link a");
+      signupBtn.onclick = (()=>{
+        login.style.marginLeft = "-50%";
+        loginText.style.marginLeft = "-50%";
+      });
+      loginBtn.onclick = (()=>{
+        login.style.marginLeft = "0%";
+        loginText.style.marginLeft = "0%";
+      });
+      signupLink.onclick = (()=>{
+        signupBtn.click();
+        return false;
+      });
+
+</script>
+
 
 </body>
 </html>

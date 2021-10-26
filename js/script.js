@@ -17,7 +17,7 @@ document.querySelector('#cart-btn').onclick = () =>{
     navbar.classList.remove('active');
 }
 
-let loginForm = document.querySelector('.login-form');
+let loginForm = document.querySelector('.wrapper');
 
 document.querySelector('#login-btn').onclick = () =>{
     loginForm.classList.toggle('active');
@@ -25,6 +25,7 @@ document.querySelector('#login-btn').onclick = () =>{
     shoppingCart.classList.remove('active');
     navbar.classList.remove('active');
 }
+
 
 let navbar = document.querySelector('.navbar');
 
@@ -64,6 +65,7 @@ filterBtn.forEach(button =>{
   };
 
 });
+
 
 var swiper = new Swiper(".home-slider", {
   centeredSlides: true,
